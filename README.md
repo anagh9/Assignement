@@ -54,4 +54,4 @@ This is a Django project that provides functionality for a social networking app
 
 ## 
 
-Collection is there upload that and use that
+"The collection has already been uploaded. Import it into Postman and use it."
