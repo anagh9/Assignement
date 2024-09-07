@@ -1,0 +1,51 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django migrations
+*/migrations/*
+!*/migrations/__init__.py
+
+# Local development environment files
+*.env
+*.venv
+*.virtualenv
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Database files
+db.sqlite3
+
+# Static files and media
+/static/
+/media/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# PyCharm-specific files
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# mypy
+.mypy_cache/
+
+# pytest
+.cache/
+*.cover
+*.hypothesis/

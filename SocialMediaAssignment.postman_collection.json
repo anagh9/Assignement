@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "2b1d1337-875e-4aa8-9e80-ab1c0ffd2ec2",
+		"name": "SocialMediaAssignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13479174"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"Anagh\",\r\n    \"last_name\":\"Kumar\",\r\n    \"email\":\"anagh9931@gmail.com\",\r\n    \"password\":\"Test@123\",\r\n    \"confirm_password\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/accounts/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"anagh9931@gmail.com\",\r\n    \"password\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/accounts/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1NzExNjI2LCJpYXQiOjE3MjU3MTEzMjYsImp0aSI6IjI2OGMyODA4ZmNiMDQzYzE5OTMwZDdmMGVlZDBlOGFhIiwidXNlcl9pZCI6Mn0.hqVaKSMrTQlLIC6nMLH-5c9_qDjUJE3zwlUQInTryws",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/accounts/search/?search=an",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"accounts",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "an"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App",
+			"item": [
+				{
+					"name": "FriendRequestSent",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1Nzk4NjI2LCJpYXQiOjE3MjU3MTIyMjYsImp0aSI6ImJiMTg0YjI2OWNlMTQ3Y2ViZTM2MDhkZjU0OGYzM2YyIiwidXNlcl9pZCI6Mn0.LSRahm6pONlCO9x--dAHiRry_qZsFR0gk-OoK5hAUY4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/app/friend-request/send/3/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"app",
+								"friend-request",
+								"send",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FriendRequestPending",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1Nzk4NjI2LCJpYXQiOjE3MjU3MTIyMjYsImp0aSI6ImJiMTg0YjI2OWNlMTQ3Y2ViZTM2MDhkZjU0OGYzM2YyIiwidXNlcl9pZCI6Mn0.LSRahm6pONlCO9x--dAHiRry_qZsFR0gk-OoK5hAUY4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/app/friend-requests/pending/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"app",
+								"friend-requests",
+								"pending",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllFriends",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1Nzk4NjI2LCJpYXQiOjE3MjU3MTIyMjYsImp0aSI6ImJiMTg0YjI2OWNlMTQ3Y2ViZTM2MDhkZjU0OGYzM2YyIiwidXNlcl9pZCI6Mn0.LSRahm6pONlCO9x--dAHiRry_qZsFR0gk-OoK5hAUY4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/app/friend-requests/pending/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"app",
+								"friend-requests",
+								"pending",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FriendRequestAccepted",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1Nzk4NzEwLCJpYXQiOjE3MjU3MTIzMTAsImp0aSI6ImZlZGYxZjAzNTk4NjRkY2JhZGI2YWFjN2IwMmNhMTRlIiwidXNlcl9pZCI6M30.yCdkgS-WOGcqL4uNT_FMr8-UQs1EMeg6XxBSygR4gy0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/app/friend-request/accept/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"app",
+								"friend-request",
+								"accept",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FriendRequestRejected",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1Nzk4NzEwLCJpYXQiOjE3MjU3MTIzMTAsImp0aSI6ImZlZGYxZjAzNTk4NjRkY2JhZGI2YWFjN2IwMmNhMTRlIiwidXNlcl9pZCI6M30.yCdkgS-WOGcqL4uNT_FMr8-UQs1EMeg6XxBSygR4gy0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/app/friend-request/accept/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"app",
+								"friend-request",
+								"accept",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
