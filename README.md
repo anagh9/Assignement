@@ -18,8 +18,8 @@ This is a Django project that provides functionality for a social networking app
    First, clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/anagh9/Assignment.git
-   cd Assingment
+   git clone https://github.com/anagh9/Assignement.git
+   cd Assignement
 
 2. **Run this to build and start the Docker container **
     ```bash
